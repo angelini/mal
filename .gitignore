@@ -18,6 +18,9 @@ c/*.o
 */step8_macros
 */step9_try
 */stepA_mal
+alisp/target/
+alisp/Cargo.lock
+alisp/.cargo
 cs/*.exe
 cs/*.dll
 cs/*.mdb

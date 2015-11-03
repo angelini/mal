@@ -1,0 +1,5 @@
+[package]
+
+name = "alisp"
+version = "0.0.1"
+authors = [ "Alex Angelini <alex.louis.angelini@gmail.com>" ]

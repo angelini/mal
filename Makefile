@@ -18,7 +18,7 @@ mal_TEST_OPTS = --start-timeout 60 --test-timeout 120
 
 IMPLS = awk bash c clojure coffee cpp crystal cs erlang elixir es6 factor forth fsharp go groovy \
 	guile haskell java julia js kotlin lua make mal ocaml matlab miniMAL nim \
-	perl php ps python r racket rpython ruby rust scala swift vb vimscript
+	perl php ps python r racket rpython ruby rust scala swift vb vimscript alisp
 
 step0 = step0_repl
 step1 = step1_read_print
@@ -62,6 +62,7 @@ EXCLUDE_PERFS = perf^mal  # TODO: fix this
 
 STEP_TEST_FILES = $(strip $(wildcard $(1)/tests/$($(2)).mal) $(wildcard tests/$($(2)).mal))
 
+alisp_STEP_TO_PROG =   alisp/target/release/$($(1))
 awk_STEP_TO_PROG =     awk/$($(1)).awk
 bash_STEP_TO_PROG =    bash/$($(1)).sh
 c_STEP_TO_PROG =       c/$($(1))
@@ -111,6 +112,7 @@ noop =
 SPACE = $(noop) $(noop)
 export FACTOR_ROOTS := .
 
+alisp_RUNSTEP =   ../$(2) $(3)
 awk_RUNSTEP =     awk -O -f ../$(2) $(3)
 bash_RUNSTEP =    bash ../$(2) $(3)
 c_RUNSTEP =       ../$(2) $(3)
