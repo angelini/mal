@@ -3,3 +3,6 @@
 name = "alisp"
 version = "0.0.1"
 authors = [ "Alex Angelini <alex.louis.angelini@gmail.com>" ]
+
+[dependencies]
+linenoise-rust = "0.1.14"
